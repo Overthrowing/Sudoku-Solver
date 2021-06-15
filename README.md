@@ -1,10 +1,10 @@
 # Sudoku Solver
 A Sudoku solver using recursion and backtracking in python.
 
-###Usage
+### Usage
 Run `main.py`
 
-###Example:
+### Example:
 `Original:`
 ```
 ╔═══╤═══╤═══╦═══╤═══╤═══╦═══╤═══╤═══╗
