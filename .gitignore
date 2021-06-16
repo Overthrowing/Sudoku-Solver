@@ -8,3 +8,6 @@ venv/
 
 # Ignore intellij Files (PyCharm)
 .idea
+
+# Testing
+test.py
