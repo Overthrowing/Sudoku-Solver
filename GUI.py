@@ -1,6 +1,8 @@
-from main import *
-import PySimpleGUI as sg
 import time
+
+import PySimpleGUI as sg
+
+from main import *
 
 BOX_SIZE = 47
 layout = [
@@ -16,6 +18,7 @@ for row in range(9):
                          (col * BOX_SIZE + BOX_SIZE + 5, row * BOX_SIZE + BOX_SIZE + 3), line_color='black')
         g.draw_text('{}'.format(board[row][col]),
                     (row * BOX_SIZE + 18, col * BOX_SIZE + 17), text_location="center")
+
 
 def solve(board):
     if solved(board):
@@ -39,15 +42,18 @@ def solve(board):
 
     return False
 
+
 def draw(board, r, c):
     g.erase()
     for row in range(9):
         for col in range(9):
             if (row, col) == (r, c):
                 g.draw_rectangle((col * BOX_SIZE + 5, row * BOX_SIZE + 3),
-                                 (col * BOX_SIZE + BOX_SIZE + 5, row * BOX_SIZE + BOX_SIZE + 3), line_color='black', fill_color=("green"))
+                                 (col * BOX_SIZE + BOX_SIZE + 5, row * BOX_SIZE + BOX_SIZE + 3), line_color='black',
+                                 fill_color=("green"))
                 g.draw_text('{}'.format(board[row][col]),
-                            (col * BOX_SIZE + 10, row * BOX_SIZE + 8), color='red', font=("courier", 17), text_location="center")
+                            (col * BOX_SIZE + 10, row * BOX_SIZE + 8), color='red', font=("courier", 17),
+                            text_location="center")
 
             g.draw_rectangle((col * BOX_SIZE + 5, row * BOX_SIZE + 3),
                              (col * BOX_SIZE + BOX_SIZE + 5, row * BOX_SIZE + BOX_SIZE + 3), line_color='black')
@@ -55,5 +61,6 @@ def draw(board, r, c):
             g.draw_text('{}'.format(board[row][col]),
                         (col * BOX_SIZE + 10, row * BOX_SIZE + 8), font=("courier", 17), text_location="center")
     time.sleep(0.3)
+
 
 solve(board)
