@@ -2,6 +2,13 @@
 A Sudoku solver using recursion and backtracking in python.
 
 ### Usage
+#### GUI:
+Change the `board` variable in `main.py` to the board that you want solved.
+
+Run `GUI.py`
+#### Command Line:
+Change the `board` variable in `main.py` to the board that you want solved.
+
 Run `main.py`
 
 ### Example:

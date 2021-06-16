@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
+
 from main import *
-import time
 
 BOX_SIZE = 47
 layout = [
@@ -61,6 +61,7 @@ def draw(board, r, c, t):
             g.draw_text('{}'.format(board[row][col]),
                         (col * BOX_SIZE + 10, row * BOX_SIZE + 8), font=("courier", 17), text_location="center")
     time.sleep(t)
+
 
 if __name__ == '__main__':
     solve(board, 0.3)
