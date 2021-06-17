@@ -60,10 +60,10 @@ def draw(board, r, c, t):
                                  (col * BOX_SIZE + BOX_SIZE + 5, row * BOX_SIZE + BOX_SIZE + 3), line_color='black')
             else:
                 g.draw_rectangle((col * BOX_SIZE + 5, row * BOX_SIZE + 3),
-                             (col * BOX_SIZE + BOX_SIZE + 5, row * BOX_SIZE + BOX_SIZE + 3), line_color='black')
+                                 (col * BOX_SIZE + BOX_SIZE + 5, row * BOX_SIZE + BOX_SIZE + 3), line_color='black')
 
                 g.draw_text('{}'.format(board[row][col]),
-                        (col * BOX_SIZE + 10, row * BOX_SIZE + 8), font=("courier", 17), text_location="center")
+                            (col * BOX_SIZE + 10, row * BOX_SIZE + 8), font=("courier", 17), text_location="center")
     time.sleep(t)
 
 
